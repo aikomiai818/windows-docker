@@ -1,10 +1,4 @@
 # syntax=docker/dockerfile:1
-
-ARG VERSION_ARG="latest"
-FROM scratch AS build-amd64
-
-COPY --from=qemux/qemu:7.18 / /
-
 ARG TARGETARCH
 ARG DEBCONF_NOWARNINGS="yes"
 ARG DEBIAN_FRONTEND="noninteractive"
